@@ -155,11 +155,57 @@ a {
 }
 
 /*------------------------------------------------
+  HEADER
+------------------------------------------------*/
+header {
+  text-align: center;
+
+  .image-container {
+    width: 150px;
+    height: 150px;
+    background-color: $light-gray;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  p {
+    font-size: 2rem;
+    color: $dark-gray;
+    line-height: 2.6rem;
+  }
+}
+
+/*------------------------------------------------
   MEDIA QUERIES
 ------------------------------------------------*/
 @media screen and (min-width: 480px) {
   html * {
     font-size: 1.8rem;
+  }
+
+  header {
+    margin-top: 20px;
+
+    .image-container {
+      height: 200px;
+      width: 200px;
+    }
+    h1 {
+      font-size: 4rem;
+    }
+
+    p {
+      font-size: 2.8rem;
+    }
   }
 
   .menu-desktop {
