@@ -29,6 +29,8 @@ module.exports = {
     contentBase: './dist',
   },
 
+  target: process.env.NODE_ENV === 'development' ? 'web' : 'browserslist',
+
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html',
