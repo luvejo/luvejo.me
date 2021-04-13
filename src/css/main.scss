@@ -7,3 +7,173 @@ $black: #4d4a52;
 $dark-gray: #9f9ca3;
 $light-gray: #e4e4e4;
 $white: #ffffff;
+
+$border-radius: 4px;
+
+/*------------------------------------------------
+  GENERAL
+------------------------------------------------*/
+html {
+  font-size: 62.5%;
+
+  * {
+    font-size: 1.6rem;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', 'Segoe UI', Verdana, sans-serif;
+    color: $black;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.center-column {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 620px;
+}
+
+/*------------------------------------------------
+  MENU
+------------------------------------------------*/
+.menu-desktop {
+  padding: 20px 0;
+  display: none;
+  justify-content: space-between;
+
+  a {
+    font-weight: bold;
+
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+  }
+
+  a.icon {
+    font-size: 2rem;
+  }
+}
+
+.menu-bar-replace {
+  display: none;
+  height: 60px;
+
+  &.active {
+    display: block;
+  }
+}
+
+.menu-mobile {
+  &.active {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+
+    .bar {
+      padding: 20px;
+    }
+  }
+
+  .bar {
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 20px;
+    background-color: white;
+
+    button {
+      background-color: transparent;
+      border: none;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      border-radius: $border-radius;
+      font-size: 2.4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        display: none;
+
+        &.active {
+          display: block;
+        }
+      }
+
+      &:hover {
+        background-color: $light-gray;
+      }
+    }
+  }
+
+  .menu {
+    text-align: center;
+    padding-bottom: 30px;
+    width: 100%;
+    display: none;
+    position: absolute;
+
+    &.active {
+      display: block;
+      background-color: $white;
+    }
+
+    a {
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+
+    .top {
+      margin-bottom: 40px;
+
+      a {
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: center;
+
+      a:not(:last-of-type) {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+/*------------------------------------------------
+  MEDIA QUERIES
+------------------------------------------------*/
+@media screen and (min-width: 480px) {
+  html * {
+    font-size: 1.8rem;
+  }
+
+  .menu-desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu-mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 660px) {
+  .center-column {
+    padding: 0px;
+  }
+}

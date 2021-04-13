@@ -8,8 +8,8 @@
   </head>
   <body>
     <div class="center-column">
-      <!-- Menu -->
-      <nav class="menu">
+      <!-- Menu Desktop -->
+      <nav class="menu-desktop">
         <div class="left">
           <a href="#">About</a>
           <a href="#">Skill</a>
@@ -17,11 +17,55 @@
         </div>
         <div class="right">
           <a href="#">Contact</a>
-          <a href="https://github.com/luvejo" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="tg://resolve?domain=luvejo" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-          <a href="https://dev.to/luvejo" target="_blank"><i class="fab fa-dev"></i></a>
+          <a href="https://github.com/luvejo" class="icon" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="tg://resolve?domain=luvejo" class="icon" target="_blank"
+            ><i class="fab fa-telegram-plane"></i
+          ></a>
+          <a href="https://dev.to/luvejo" class="icon" target="_blank"
+            ><i class="fab fa-dev"></i
+          ></a>
         </div>
       </nav>
+
+      <!--
+        This takes the place of .menu-mobile when its "display"
+        property is set to "fixed". It prevents the rest of the
+        elements from moving upwards.
+      -->
+      <div class="menu-bar-replace"></div>
+
+      <!-- Menu Mobile -->
+      <div class="menu-mobile">
+        <div class="bar">
+          <button id="burger">
+            <!-- These are transformed into SVG-->
+            <i class="fas fa-bars active"></i>
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <nav class="menu">
+          <div class="top">
+            <a href="#">About</a>
+            <a href="#">Skill</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="bottom">
+            <a href="https://github.com/luvejo" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="tg://resolve?domain=luvejo" target="_blank"
+              ><i class="fab fa-telegram-plane"></i
+            ></a>
+            <a href="https://dev.to/luvejo" target="_blank"
+              ><i class="fab fa-dev"></i
+            ></a>
+          </div>
+        </nav>
+      </div>
 
       <!-- Header -->
       <header>
@@ -222,5 +266,45 @@
 
     <!-- Bundle -->
     <script src="main.js"></script>
+    <script>
+      // Mobile Menu Setup.
+      function initMenu() {
+        const burger = document.querySelector('#burger')
+        const menuContainer = document.querySelector('.menu-mobile')
+        const menu = document.querySelector('.menu-mobile .menu')
+        const menuReplace = document.querySelector('.menu-bar-replace')
+        const menuLinks = document.querySelectorAll('.menu-mobile a')
+
+        function toggleMenu() {
+          menu.classList.toggle('active')
+          burger.classList.toggle('active')
+          menuContainer.classList.toggle('active')
+          menuReplace.classList.toggle('active')
+
+          const burgerIcons = document.querySelectorAll('#burger svg')
+
+          // Switch between icons:
+          burgerIcons.forEach((icon) => {
+            icon.classList.toggle('active')
+          })
+        }
+
+        burger.addEventListener('click', toggleMenu)
+        menuLinks.forEach((link) => {
+          link.addEventListener('click', toggleMenu)
+        })
+      }
+
+      // Detect if document is ready.
+      function ready(callbackFunction) {
+        if (document.readyState != 'loading') {
+          callbackFunction(event)
+        } else {
+          document.addEventListener('DOMContentLoaded', callbackFunction)
+        }
+      }
+
+      ready(initMenu)
+    </script>
   </body>
 </html>
