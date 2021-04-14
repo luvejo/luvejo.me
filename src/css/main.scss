@@ -262,7 +262,7 @@ section {
   }
 
   .skill-list {
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -275,6 +275,78 @@ section {
     background-color: $black;
     border-radius: $border-radius;
     display: inline-block;
+  }
+}
+
+/*------------------------------------------------
+  SECTION: PROJECTS
+------------------------------------------------*/
+.section-projects {
+  display: block;
+
+  .project-card-container {
+    margin-top: 30px;
+    width: 100%;
+
+    &:first-of-type {
+      margin-top: 20px;
+    }
+
+    .date-range-desktop {
+      display: none;
+    }
+
+    .date-range-mobile,
+    .date-range-desktop {
+      text-align: center;
+
+      span {
+        color: $dark-gray;
+        font-weight: bold;
+      }
+
+      .separator {
+        display: block;
+      }
+    }
+
+    .project-card {
+      border: 2px solid $light-gray;
+      padding: 20px;
+      border-radius: $border-radius;
+    }
+
+    .image-container {
+      height: 150px;
+      border-radius: $border-radius;
+      overflow: hidden;
+
+      img {
+        max-width: 100%;
+        min-height: 100%;
+      }
+    }
+
+    .project-title {
+      font-size: 2.4rem;
+      font-weight: bold;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+
+      a {
+        margin-left: 10px;
+      }
+
+      * {
+        font-size: 2.4rem;
+        color: $dark-gray;
+      }
+    }
+
+    .description {
+      margin-top: 10px;
+    }
   }
 }
 
@@ -316,6 +388,45 @@ section {
       font-size: 2.8rem;
     }
   }
+
+  // SECTION
+  section {
+    margin-top: 60px;
+  }
+
+  // SECTION
+  .section-projects {
+    .project-card-container {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      margin-top: 60px;
+
+      .date-range-desktop {
+        text-align: left;
+        min-width: 120px;
+        border-left: 4px solid $light-gray;
+        padding-left: 5px;
+        display: block;
+      }
+
+      .date-range-mobile {
+        display: none;
+      }
+
+      .image-container {
+        height: 200px;
+
+        img {
+          height: auto;
+        }
+      }
+
+      .project-title {
+        font-size: 3.2rem;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 660px) {
@@ -334,7 +445,7 @@ section {
 
     .content {
       margin-top: 0px;
-      width: 480px;
+      max-width: 480px;
     }
   }
 
