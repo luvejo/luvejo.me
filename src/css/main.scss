@@ -326,7 +326,7 @@ section {
     padding: 0px;
   }
 
-  // SECTION: ABOUT
+  // SECTION
   section {
     display: flex;
     align-items: start;
@@ -338,6 +338,22 @@ section {
     .content {
       margin-top: 0px;
       width: 480px;
+    }
+  }
+
+  // SECTION: SKILLS
+  .section-skills {
+    h3:first-of-type {
+      display: block;
+      margin-top: 0px;
+    }
+
+    h3 {
+      text-align: left;
+    }
+
+    .lang-level {
+      margin-top: 20px;
     }
   }
 }
