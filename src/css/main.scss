@@ -30,8 +30,13 @@ h1 {
   font-size: 3.2rem;
 }
 
-h2 {
+h2,
+h3 {
   font-size: 2.4rem;
+}
+
+h3 {
+  color: $dark-gray;
 }
 
 a {
@@ -51,6 +56,7 @@ a {
   padding: 20px 0;
   display: none;
   justify-content: space-between;
+  align-items: center;
 
   a {
     font-weight: bold;
@@ -210,6 +216,69 @@ section {
 }
 
 /*------------------------------------------------
+  SECTION: SKILLS
+------------------------------------------------*/
+.section-skills {
+  h3 {
+    text-align: center;
+    margin-top: 20px;
+
+    &:first-of-type {
+      display: none;
+    }
+  }
+}
+
+.lang-level {
+  &:not(:first-of-type) {
+    margin-top: 20px;
+  }
+
+  div {
+    background-color: $black;
+    padding: 5px;
+    color: $white;
+    border-radius: 0 20px 20px 0;
+
+    &.full {
+      width: 100%;
+    }
+
+    &.almost-full {
+      width: 70%;
+    }
+  }
+
+  p {
+    color: $dark-gray;
+  }
+}
+
+.skillset {
+  margin-top: 20px;
+
+  .title {
+    font-weight: bold;
+  }
+
+  .skill-list {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .skill {
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+    color: $white;
+    background-color: $black;
+    border-radius: $border-radius;
+    display: inline-block;
+  }
+}
+
+/*------------------------------------------------
   MEDIA QUERIES
 ------------------------------------------------*/
 @media screen and (min-width: 480px) {
@@ -222,7 +291,8 @@ section {
     font-size: 4rem;
   }
 
-  h2 {
+  h2,
+  h3 {
     font-size: 3.2rem;
   }
 
@@ -259,12 +329,14 @@ section {
   // SECTION: ABOUT
   section {
     display: flex;
+    align-items: start;
 
     h2 {
       flex-grow: 1;
     }
 
     .content {
+      margin-top: 0px;
       width: 480px;
     }
   }
