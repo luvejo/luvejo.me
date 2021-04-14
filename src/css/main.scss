@@ -26,6 +26,14 @@ html {
   }
 }
 
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
 a {
   text-decoration: none;
 }
@@ -173,10 +181,6 @@ header {
     }
   }
 
-  h1 {
-    font-size: 3.2rem;
-  }
-
   p {
     font-size: 2rem;
     color: $dark-gray;
@@ -185,29 +189,44 @@ header {
 }
 
 /*------------------------------------------------
+  SECTION: ABOUT
+------------------------------------------------*/
+section {
+  margin-top: 30px;
+
+  .content {
+    margin-top: 10px;
+
+    p:not(:first-of-type) {
+      margin-top: 20px;
+    }
+
+    .separator {
+      text-align: center;
+      color: $dark-gray;
+      line-height: 1px;
+    }
+  }
+}
+
+/*------------------------------------------------
   MEDIA QUERIES
 ------------------------------------------------*/
 @media screen and (min-width: 480px) {
+  // GENERAL
   html * {
     font-size: 1.8rem;
   }
 
-  header {
-    margin-top: 20px;
-
-    .image-container {
-      height: 200px;
-      width: 200px;
-    }
-    h1 {
-      font-size: 4rem;
-    }
-
-    p {
-      font-size: 2.8rem;
-    }
+  h1 {
+    font-size: 4rem;
   }
 
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  // MENU
   .menu-desktop {
     display: flex;
     justify-content: space-between;
@@ -216,10 +235,37 @@ header {
   .menu-mobile {
     display: none;
   }
+
+  // HEADER
+  header {
+    margin-top: 20px;
+
+    .image-container {
+      height: 200px;
+      width: 200px;
+    }
+
+    p {
+      font-size: 2.8rem;
+    }
+  }
 }
 
 @media screen and (min-width: 660px) {
   .center-column {
     padding: 0px;
+  }
+
+  // SECTION: ABOUT
+  section {
+    display: flex;
+
+    h2 {
+      flex-grow: 1;
+    }
+
+    .content {
+      width: 480px;
+    }
   }
 }
