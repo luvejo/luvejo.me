@@ -10,6 +10,8 @@ $white: #ffffff;
 
 $border-radius: 4px;
 
+$section-margin: 40px;
+
 /*------------------------------------------------
   GENERAL
 ------------------------------------------------*/
@@ -198,10 +200,10 @@ header {
 }
 
 /*------------------------------------------------
-  SECTION: ABOUT
+  SECTION
 ------------------------------------------------*/
 section {
-  margin-top: 30px;
+  margin-top: $section-margin;
 
   .content {
     margin-top: 10px;
@@ -216,6 +218,13 @@ section {
       line-height: 1px;
     }
   }
+}
+
+/*------------------------------------------------
+  SECTION: ABOUT
+------------------------------------------------*/
+.section-about {
+  margin-top: 20px;
 }
 
 /*------------------------------------------------
@@ -281,6 +290,10 @@ section {
   }
 }
 
+.skillset-list > div:first-child {
+  margin-top: 10px;
+}
+
 /*------------------------------------------------
   SECTION: RESUME
 ------------------------------------------------*/
@@ -324,12 +337,8 @@ section {
   display: block;
 
   .project-card-container {
-    margin-top: 30px;
+    margin-top: 10px;
     width: 100%;
-
-    &:first-of-type {
-      margin-top: 20px;
-    }
 
     .date-range-desktop {
       display: none;
@@ -338,6 +347,7 @@ section {
     .date-range-mobile,
     .date-range-desktop {
       text-align: center;
+      color: $dark-gray;
 
       span {
         color: $dark-gray;
@@ -383,14 +393,18 @@ section {
       margin-top: 10px;
     }
   }
+
+  & > article:not(:first-of-type) {
+    margin-top: 20px;
+  }
 }
 
 /*------------------------------------------------
   SECTION: CONTACT
 ------------------------------------------------*/
 .section-contact-container {
-  margin-top: 30px;
-  padding: 30px 0;
+  margin-top: $section-margin * 2;
+  padding: $section-margin 0;
   width: 100%;
   background-color: $light-gray;
 }
@@ -448,9 +462,8 @@ footer {
 /*------------------------------------------------
   MEDIA QUERIES
 ------------------------------------------------*/
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 550px) {
   // GENERAL
-
   h1 {
     font-size: 4rem;
   }
@@ -484,11 +497,12 @@ footer {
     }
   }
 
-  // SECTION
-  section {
-    margin-top: 60px;
+  // SECTION: ABOUT
+  .section-about {
+    margin-top: 30px;
   }
 
+  // SECTION: RESUME
   .section-resume {
     display: block;
 
@@ -532,7 +546,7 @@ footer {
       display: flex;
       align-items: start;
       justify-content: space-between;
-      margin-top: 60px;
+      margin-top: 20px;
 
       .date-range-desktop {
         text-align: left;
@@ -558,12 +572,15 @@ footer {
         font-size: 3.2rem;
       }
     }
+
+    & > article:not(:first-of-type) {
+      margin-top: 40px;
+    }
   }
 
   // SECTION: CONTACT
   .section-contact-container {
-    padding: 60px 0;
-    margin-top: 60px;
+    padding: $section-margin 0;
 
     form {
       margin-top: 0px;
@@ -589,6 +606,11 @@ footer {
       margin-top: 0px;
       max-width: 480px;
     }
+  }
+
+  // SECTION: ABOUT
+  .section-about {
+    margin-top: 50px;
   }
 
   // SECTION: SKILLS
