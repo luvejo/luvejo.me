@@ -1,4 +1,7 @@
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin')
+  .default
 const path = require('path')
 
 module.exports = {
@@ -20,7 +23,12 @@ module.exports = {
       {
         test: /\.(s[ac]|c)ss$/,
         exclude: /node_modules/,
-        use: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader',
+          'postcss-loader',
+        ],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -44,8 +52,13 @@ module.exports = {
   target: process.env.NODE_ENV === 'development' ? 'web' : 'browserslist',
 
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
     }),
+    new HTMLInlineCSSWebpackPlugin(),
   ],
 }
