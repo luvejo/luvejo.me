@@ -282,6 +282,42 @@ section {
 }
 
 /*------------------------------------------------
+  SECTION: RESUME
+------------------------------------------------*/
+.section-resume {
+  .work-entry-container {
+    .date-range-desktop {
+      display: none;
+    }
+
+    .date-range-mobile,
+    .date-range-desktop {
+      margin-top: 0px;
+      color: $dark-gray;
+
+      span {
+        color: $dark-gray;
+        font-weight: bold;
+      }
+    }
+
+    .work-entry {
+      margin-top: 20px;
+      padding-left: 10px;
+      border-left: 4px solid $light-gray;
+
+      .title {
+        font-weight: bold;
+      }
+
+      .description {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+/*------------------------------------------------
   SECTION: PROJECTS
 ------------------------------------------------*/
 .section-projects {
@@ -306,10 +342,6 @@ section {
       span {
         color: $dark-gray;
         font-weight: bold;
-      }
-
-      .separator {
-        display: block;
       }
     }
 
@@ -455,6 +487,43 @@ footer {
   // SECTION
   section {
     margin-top: 60px;
+  }
+
+  .section-resume {
+    display: block;
+
+    h2 {
+      display: block;
+    }
+
+    .work-entry-container {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .date-range-mobile {
+        display: none;
+      }
+
+      .date-range-desktop {
+        display: block;
+        color: $black;
+        border-left: 4px solid $light-gray;
+        padding-left: 5px;
+        min-width: 120px;
+
+        span {
+          font-weight: bold;
+        }
+      }
+
+      .work-entry {
+        border: none;
+        padding: 0px;
+        margin-top: 0px;
+      }
+    }
   }
 
   // SECTION: PROJECTS
