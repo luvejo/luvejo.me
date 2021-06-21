@@ -1,0 +1,56 @@
+<article class='project-card-container'>
+  <p class='date-range-mobile'>
+    {{firstCommit.month}}
+    {{#if (not-equal firstCommit.year lastCommit.year)}}
+      <span>{{firstCommit.year}}</span>
+    {{/if}}
+
+    -
+
+    {{lastCommit.month}},
+    <span>{{lastCommit.year}}</span>
+  </p>
+
+  <p class='date-range-desktop'>
+    {{firstCommit.month}},
+    <span>{{firstCommit.year}}</span>
+    <br />
+    {{lastCommit.month}},
+    <span>{{lastCommit.year}}</span>
+  </p>
+
+  <div class='content project-card'>
+    <div class='image-container'>
+      {{#with-image image.name}}
+        <img src='{{src}}' alt=' {{image.description}}' />
+      {{/with-image}}
+    </div>
+    <p class='project-title'>
+      {{title}}
+
+      {{#if links.demo}}
+        <a href='{{links.demo}}' target='_blank'>
+          <i class='fas fa-external-link-alt'></i>
+        </a>
+      {{/if}}
+
+      {{#if links.github}}
+        <a href='{{links.github}}' target='_blank'>
+          <i class='fab fa-github'></i>
+        </a>
+      {{/if}}
+    </p>
+
+    <p class='description'>{{{description}}}</p>
+
+    <div class='skillset'>
+      <p class='title'>Stack</p>
+
+      <div class='skill-list'>
+        {{#each stack}}
+          <div class='skill'>{{this}}</div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</article>

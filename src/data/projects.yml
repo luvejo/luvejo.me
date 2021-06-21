@@ -1,0 +1,68 @@
+---
+- title: Sprout
+  image:
+    name: sprout.jpg
+    description: Oh boi project screen capture
+  links:
+    demo: https://sprout.luvejo.me
+    github: https://github.com/luvejo/sprout-frontend
+  description:
+    The home page of a fictional eco-products ecommerce. Based on a <a
+    href="https://www.behance.net/klochocheek" target="_blank" >Julia Klochok</a>'s
+    design.
+  stack:
+    - Vue.js
+    - TypeScript
+    - Sass
+    - Jest
+    - Vue Test Utils
+    - Vuex
+    - Vue Router
+  firstCommit:
+    month: Apr
+    year: 2021
+  lastCommit:
+    month: Jun
+    year: 2021
+
+- title: Oh boi!
+  image:
+    name: ohboi.jpg
+    description: Oh boi project screen capture
+  links:
+    demo: https://ohboi.luvejo.me
+    github: https://github.com/luvejo/ohboi-frontend
+  description: Share those awkward stories that keep you up at night. A JAMstack
+    sample project.
+  stack:
+    - Nuxt.js
+    - Express
+    - Passport.js
+    - Sass
+    - Docker
+  firstCommit:
+    month: Feb
+    year: 2021
+  lastCommit:
+    month: Mar
+    year: 2021
+
+- title: Book CRUD
+  image:
+    name: bookcrud.jpg
+    description: Book CRUD project screen capture
+  links:
+    github: https://github.com/luvejo/book-crud
+  description: A simple dockerized CRUD application. Includes authentication and
+    automatic HTTPS with Let's Encrypt and Certbot.
+  stack:
+    - Nuxt.js
+    - Django Rest Framework
+    - Docker
+    - Nginx
+  firstCommit:
+    month: Nov
+    year: 2019
+  lastCommit:
+    month: Nov
+    year: 2019

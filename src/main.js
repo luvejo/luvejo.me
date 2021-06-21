@@ -2,7 +2,7 @@ import '@fortawesome/fontawesome-free/js/fontawesome'
 import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/brands'
 
-import './css/main.scss'
+import './assets/css/main.scss'
 
 // Mobile Menu Setup.
 function initMenu() {
