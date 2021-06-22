@@ -208,6 +208,10 @@ section {
   .content {
     margin-top: 10px;
 
+    p {
+      line-height: 140%;
+    }
+
     p:not(:first-of-type) {
       margin-top: 20px;
     }
@@ -230,20 +234,13 @@ section {
 /*------------------------------------------------
   SECTION: SKILLS
 ------------------------------------------------*/
-.section-skills {
-  h3 {
-    text-align: center;
-    margin-top: 20px;
-
-    &:first-of-type {
-      display: none;
-    }
-  }
+.lang-level-list {
+  margin-top: 10px;
 }
 
 .lang-level {
   &:not(:first-of-type) {
-    margin-top: 20px;
+    margin-top: 15px;
   }
 
   div {
@@ -252,12 +249,12 @@ section {
     color: $white;
     border-radius: 0 20px 20px 0;
 
-    &.full {
+    &.native {
       width: 100%;
     }
 
-    &.almost-full {
-      width: 70%;
+    &.intermediate {
+      width: 60%;
     }
   }
 
@@ -266,11 +263,16 @@ section {
   }
 }
 
+.skillset-list {
+  margin-top: 40px;
+}
+
 .skillset {
   margin-top: 20px;
 
   .title {
     font-weight: bold;
+    color: $dark-gray;
   }
 
   .skill-list {
@@ -288,10 +290,6 @@ section {
     border-radius: $border-radius;
     display: inline-block;
   }
-}
-
-.skillset-list > div:first-child {
-  margin-top: 10px;
 }
 
 /*------------------------------------------------
@@ -617,17 +615,10 @@ footer {
 
   // SECTION: SKILLS
   .section-skills {
-    h3:first-of-type {
-      display: block;
-      margin-top: 0px;
-    }
-
-    h3 {
-      text-align: left;
-    }
-
     .lang-level {
-      margin-top: 20px;
+      &:not(:first-of-type) {
+        margin-top: 20px;
+      }
     }
   }
 }
