@@ -15,6 +15,22 @@
     - Vue Test Utils
     - Vuex
     - Vue Router
+    - Cypress
+  firstCommit:
+    month: Apr
+    year: 2021
+  lastCommit:
+    month: Jun
+    year: 2021
+
+- title: Portfolio v1
+  links:
+    github: https://github.com/luvejo/luvejo.me
+  description: My personal website (where you're currently at).
+  stack:
+    - Webpack
+    - Handlebars
+    - Sass
   firstCommit:
     month: Apr
     year: 2021
