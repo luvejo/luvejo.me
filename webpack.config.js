@@ -7,8 +7,11 @@ const path = require('path')
 
 const { loadData } = require('./webpack.helpers')
 
+const appEnv =
+  process.env.NODE_ENV === 'development' ? 'development' : 'production'
+
 module.exports = {
-  mode: process.env.NODE_ENV || 'production',
+  mode: appEnv,
 
   entry: './src/main.js',
   output: {
@@ -40,7 +43,7 @@ module.exports = {
         test: /\.(s[ac]|c)ss$/,
         exclude: /node_modules/,
         use: [
-          process.env.NODE_ENV === 'development'
+          appEnv === 'development'
             ? 'style-loader'
             : MiniCssExtractPlugin.loader,
           'css-loader',
@@ -63,7 +66,7 @@ module.exports = {
     contentBase: './dist',
   },
 
-  target: process.env.NODE_ENV === 'development' ? 'web' : 'browserslist',
+  target: appEnv === 'development' ? 'web' : 'browserslist',
 
   plugins: [
     new MiniCssExtractPlugin({
@@ -76,6 +79,7 @@ module.exports = {
       scriptLoading: 'defer',
       templateParameters: {
         projects: loadData('projects.yml'),
+        appEnv,
       },
     }),
     new HTMLInlineCSSWebpackPlugin(),
