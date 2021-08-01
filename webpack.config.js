@@ -2,6 +2,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HTMLInlineCSSWebpackPlugin =
   require('html-inline-css-webpack-plugin').default
+const CopyPlugin = require('copy-webpack-plugin')
 
 const path = require('path')
 
@@ -83,5 +84,8 @@ module.exports = {
       },
     }),
     new HTMLInlineCSSWebpackPlugin(),
+    new CopyPlugin({
+      patterns: [{ from: 'src/assets/img/', to: 'img/' }],
+    }),
   ],
 }
