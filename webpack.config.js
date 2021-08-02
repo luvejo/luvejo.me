@@ -85,7 +85,7 @@ module.exports = {
     }),
     new HTMLInlineCSSWebpackPlugin(),
     new CopyPlugin({
-      patterns: [{ from: 'src/assets/img/', to: 'img/' }],
+      patterns: [{ from: 'src/assets/img/', to: './' }],
     }),
   ],
 }
