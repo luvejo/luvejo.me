@@ -4,7 +4,7 @@
   VARIABLES
 ------------------------------------------------*/
 $black: #4d4a52;
-$dark-gray: #9f9ca3;
+$dark-gray: #929096;
 $light-gray: #e4e4e4;
 $white: #ffffff;
 
@@ -267,7 +267,7 @@ section {
 
   .title {
     font-weight: bold;
-    color: $dark-gray;
+    color: $black;
   }
 
   .skill-list {
@@ -296,6 +296,10 @@ section {
       display: none;
     }
 
+    .date-range-mobile {
+      margin-bottom: 20px;
+    }
+
     .date-range-mobile,
     .date-range-desktop {
       margin-top: 0px;
@@ -309,15 +313,28 @@ section {
 
     .work-entry {
       margin-top: 20px;
-      padding-left: 10px;
+      padding-left: 20px;
       border-left: 4px solid $light-gray;
 
       .title {
         font-weight: bold;
       }
 
+      .subtitle {
+        margin-top: 0px;
+
+        a {
+          color: $dark-gray;
+        }
+      }
+
       .description {
         margin-top: 10px;
+
+        ul {
+          list-style: square;
+          padding-left: 40px;
+        }
       }
     }
   }
@@ -605,6 +622,20 @@ footer {
         border: none;
         padding: 0px;
         margin-top: 0px;
+
+        .title {
+          font-weight: bold;
+          font-size: 2rem;
+        }
+
+        .subtitle {
+          margin-top: 0px;
+          margin-bottom: 20px;
+
+          a {
+            color: $dark-gray;
+          }
+        }
       }
     }
   }
