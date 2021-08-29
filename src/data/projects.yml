@@ -38,6 +38,19 @@
     month: Jun
     year: 2021
 
+- title: Fictorama
+  links:
+    demo: https://www.figma.com/proto/bnRBQBKO9T5J0f9mYkBZhl/Fictorama?scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A776&show-proto-sidebar=1&node-id=1%3A776&hide-ui=1
+  description: The home page of fictional writing contests website.
+  stack:
+    - Figma
+  firstCommit:
+    month: Feb
+    year: 2021
+  lastCommit:
+    month: Feb
+    year: 2021
+
 - title: Oh boi!
   links:
     demo: https://ohboi.luvejo.me
@@ -56,6 +69,19 @@
   lastCommit:
     month: Mar
     year: 2021
+
+- title: Civics
+  links:
+    demo: https://www.figma.com/proto/nTWwkB1bJyABheU8CFJYo5/Civics---Web?node-id=396%3A131&scaling=scale-down&page-id=0%3A1&starting-point-node-id=396%3A131&hide-ui=1
+  description: A partial redesign of <a href="https://civics.cc>" target="_blank">civics.cc</a>.
+  stack:
+    - Figma
+  firstCommit:
+    month: Jul
+    year: 2020
+  lastCommit:
+    month: Ago
+    year: 2020
 
 - title: Book CRUD
   links:
