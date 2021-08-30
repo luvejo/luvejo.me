@@ -86,7 +86,7 @@
 - title: Civics
   links:
     demo: https://www.figma.com/proto/nTWwkB1bJyABheU8CFJYo5/Civics---Web?node-id=396%3A131&scaling=scale-down&page-id=0%3A1&starting-point-node-id=396%3A131&hide-ui=1
-  description: A partial redesign practice of <a href="https://civics.cc>" target="_blank">civics.cc</a>, civic innovation map developed by citizens from across Ibero-America.
+  description: A partial redesign practice of <a href="https://civics.cc>" target="_blank">civics.cc</a>, a civic innovation map developed by citizens from across Ibero-America.
   stack:
     - Figma
   firstCommit:
