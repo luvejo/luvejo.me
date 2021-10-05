@@ -54,7 +54,7 @@
 - title: Fictorama
   links:
     demo: https://www.figma.com/proto/bnRBQBKO9T5J0f9mYkBZhl/Fictorama?scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A776&show-proto-sidebar=1&node-id=1%3A776&hide-ui=1
-  description: The home page's mockup of fictional writing contests website.
+  description: The home page's mockup of a fictional writing contests website.
   stack:
     - Figma
   firstCommit:
