@@ -3,9 +3,10 @@
 /*------------------------------------------------
   VARIABLES
 ------------------------------------------------*/
-$black: #4d4a52;
-$dark-gray: #929096;
+$black: #1d1c1e;
+$dark-gray: #747270;
 $light-gray: #e4e4e4;
+$lightest-gray: #f0f0f0;
 $white: #ffffff;
 
 $border-radius: 4px;
@@ -254,7 +255,7 @@ section {
   }
 
   p {
-    color: $dark-gray;
+    color: $black;
   }
 }
 
@@ -367,7 +368,7 @@ section {
 
     .project-card {
       width: 100%;
-      border: 2px solid $light-gray;
+      background-color: $lightest-gray;
       padding: 20px;
       border-radius: $border-radius;
     }
